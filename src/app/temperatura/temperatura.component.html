@@ -1,0 +1,35 @@
+
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+        <label class="form-label"for="">Grados a convertir</label>
+        <input type="text" class="form-control"[(ngModel)]="grados" name="num1" placeholder="">
+        
+        </div>
+    
+
+    <div class="mb-3">
+        <input type="radio" id="farenheit" [(ngModel)]="operacion" name="operacion" value="farenheit">
+        <label for="farenheit">Farenheit a Celsius</label>
+<br>
+        <input type="radio" id="celsius" [(ngModel)]="operacion" name="operacion" value="celsius">
+        <label for="celsius">Celsius a Ferenheit</label>
+<br>
+      
+
+    </div>
+    
+
+    
+    <div class="mb-3">
+        <button (click)="calcular()"class="btn btn-primary">Clacular</button></div>
+       
+    </div>
+    
+    
+
+    <div class="col-6">
+        <h2>Resultado es: {{resultado}}</h2>
+    </div>
+</div>
+
