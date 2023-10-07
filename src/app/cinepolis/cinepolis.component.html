@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis</title>
+</head>
+<body  >
+  
+  <div class="container">
+    <form class="row ">
+      <h1 class="titulo">Cinépolis</h1>
+      <div class="col-6 mb-5" style="margin: 30px">
+        <h1 class="normal">Entradas</h1>
+        <p class="dashed">
+          <label class="form-label"for="nombreInput" style="color:black; font-size: 2em">Nombre</label>
+         
+          <input type="text" id="nombreInput"class="form-control" [(ngModel)]="nombre"  name="nombre" placeholder="Nombre">
+
+        <label class="form-label"for="boletosInput" style="color:black; font-size: 2em">Compradores</label>
+        <input type="number" id="boletosInput"class="form-control" [(ngModel)]="compradores"  name="boletos" placeholder="Cantidad de compradores">
+
+       <br> <label for="" class="form-label" style="color:black; font-size: 2em">Tarjeta Cineco</label><br>
+
+        <input type="radio" id="si" name="tarjeta" value="Si" [(ngModel)]="tarjetaseleccionada" >
+        <label for="si" style="margin: 20px">Si</label>
+
+        <input type="radio" id="no" name="tarjeta" value="No" [(ngModel)]="tarjetaseleccionada">
+        <label for="no" style="margin: 20px">No</label><br><br>
+
+        
+        <label class="form-label"for="boletosInput" style="color:black; font-size: 2em">Boletos</label>
+        <input type="text" id="boletosInput"class="form-control" [(ngModel)]="boletos" [max]=" maxboletos" name="boletos" placeholder="Cantidad Boletos">
+        </p>
+      </div>
+     
+      
+      <div class="col-4 mb-1">
+        <br>
+      <br>
+      <br>
+      <br>
+      
+        <h1 class="normal">Salidas</h1>
+        <p class="resultado">
+          Cliente: {{mostrar}}
+          
+          <br>
+          Total pagar 
+          ${{totalDescuento}}
+          <br>
+          {{mostrarBoletos}}
+          <br>
+          {{error}}
+        </p>
+       
+        
+      </div>
+      <div class="col-5">
+        
+      </div>
+
+      <div class="col-3 " >
+        <h1 class="normal">Acciones</h1>
+        <p class="dashed">
+     <button style="margin: 30px" (click)="Calcular()" class="btn btn-primary">Procesar</button>
+     
+        <button (click)="Salir()" class="btn btn-primary">Salir</button>
+      </p>
+      </div>
+      
+
+     
+
+    </form>
+</div>
+    
+</body>
+    
+    
+
+</html>
+    
+
+

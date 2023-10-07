@@ -9,13 +9,15 @@ import { MultiplicacionComponent } from './multiplicacion/multiplicacion.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PruebaComponent } from './prueba/prueba.component';
 import { MaterialModule } from './material/material/material.module';
+import { CinepolisComponent } from './cinepolis/cinepolis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemperaturaComponent,
     MultiplicacionComponent,
-        PruebaComponent
+    PruebaComponent,
+    CinepolisComponent
   ],
   imports: [
     BrowserModule,
